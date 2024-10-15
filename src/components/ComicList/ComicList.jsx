@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const ComicList = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const queryParams = searchTerm ? `?titleStartsWith=${searchTerm}` : "";
+  const queryParams = searchTerm ? `&titleStartsWith=${searchTerm}` : "";
   const { data: comics, loading, error } = useFetch("comics", queryParams);
   console.log(comics, "data comics");
   const handleSearch = (term) => {

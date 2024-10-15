@@ -8,7 +8,7 @@ const ComicDetail = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error al realizar la consulta</div>;
 
-  const selectedComic = comic.data.results[0];
+  const selectedComic = comic[0];
   return (
     <div>
       <h2>{selectedComic.title}</h2>
